@@ -1,5 +1,9 @@
 ## sync-data-struct
 sync-data-struct是一个用来比较两个数据库之间的数据结构差异,并生成更新DDL的工具包.方便对比出两个数据库之间差异来进行数据结构同步.
+
+## support database
+- mysql
+
 ## install
 ```
 composer  require zyimm/sync-data-struct
