@@ -1,18 +1,24 @@
 <?php
 
-
 namespace Zyimm\dbStructSync\connector;
 
+use Exception;
+use PDO;
 
+/**
+ * Class Mysql
+ *
+ * @package Zyimm\dbStructSync\connector
+ */
 class Mysql
 {
     /**
-     * @var \PDO
+     * @var PDO
      */
     private $localConnection;
 
     /**
-     * @var \PDO
+     * @var PDO
      */
     private $devConnection;
 
@@ -20,6 +26,11 @@ class Mysql
 
     public $devDb = [];
 
+    /**
+     * connectionMap
+     *
+     * @return string[]
+     */
     public static function connectionMap()
     {
         return [
@@ -33,7 +44,7 @@ class Mysql
      *
      *
      * @param  array  $config
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct(array $config = [])
     {
@@ -43,7 +54,7 @@ class Mysql
             $dsn               = $this->getDsn($config[$key]['host'], $config[$key]['dbname']);
             $user              = $config[$key]['username'];
             $password          = $config[$key]['passwd'];
-            $this->{$connect}  = new \PDO($dsn, $user, $password);
+            $this->{$connect}  = new PDO($dsn, $user, $password);
         }
     }
 
@@ -51,7 +62,7 @@ class Mysql
      * getConfig
      *
      * @return false|string
-     * @throws \Exception
+     * @throws Exception
      */
     public function getConfig()
     {
@@ -60,21 +71,38 @@ class Mysql
             $config = file_get_contents($file);
         }
         if (empty($config)) {
-            throw new \Exception('db config exception');
+            throw new Exception('db config exception');
         }
         return $config;
     }
 
-    public function getDsn($host = '127.0.0.1', $db_name)
+    /**
+     * getDsn
+     *
+     * @param  string  $host
+     * @param  string  $db_name
+     * @return string
+     */
+    public function getDsn($host = '', $db_name = '')
     {
         return "mysql:host={$host};dbname={$db_name}";
     }
 
+    /**
+     * getDevConnection
+     *
+     * @return PDO
+     */
     public function getLocalConnection()
     {
         return $this->localConnection;
     }
 
+    /**
+     * getDevConnection
+     *
+     * @return PDO
+     */
     public function getDevConnection()
     {
         return $this->devConnection;

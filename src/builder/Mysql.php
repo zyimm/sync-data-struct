@@ -3,6 +3,8 @@
 
 namespace Zyimm\dbStructSync\builder;
 
+use PDO;
+use PDOStatement;
 use Zyimm\dbStructSync\builder\traits\BuildTrait;
 use \Zyimm\dbStructSync\connector\Mysql as Connector;
 use Zyimm\dbStructSync\constants\Advance;
@@ -10,7 +12,6 @@ use Zyimm\dbStructSync\constants\Advance;
 class Mysql
 {
     use BuildTrait;
-
     /**
      * @var Connector
      */
@@ -31,8 +32,16 @@ class Mysql
         'constraint' => '(^[^`]\s*CONSTRAINT\s+(`.*`) .*[,]?$)',
     ];
 
+    /**
+     * @var bool removeAutoIncrement
+     */
     private $removeAutoIncrement = false;
 
+    /**
+     * config
+     *
+     * @var array[]
+     */
     public static $advance = [
         'VIEW'      => [
             Advance::VIEW, 'Create View'
@@ -60,11 +69,21 @@ class Mysql
         return $this;
     }
 
+    /**
+     * Mysql constructor.
+     *
+     * @param  Connector  $connector
+     */
     public function __construct(Connector $connector)
     {
         $this->connector = $connector;
     }
 
+    /**
+     * getConnector
+     *
+     * @return Connector
+     */
     public function getConnector()
     {
         return $this->connector;
@@ -73,31 +92,32 @@ class Mysql
     /**
      * getStructure
      *
-     * @param  \PDO  $db
+     * @param  PDO  $db
      * @return array[]
      */
-    private function getStructure(\PDO $db)
+    private function getStructure(PDO $db)
     {
         $stmt1         = $db->query("SHOW TABLE STATUS WHERE Comment!='VIEW'");
         $alert_columns = $constraints = [];
         $show_create   = $tables = [];
         $pattern       = '/'.implode('|', self::$patterns).'/m';
         foreach ($stmt1->fetchAll() as $row) {
-            //获取建表语句
+            //show table desc
             $alert_columns_conn = $db->query('SHOW CREATE TABLE '.$row['Name']);
             $sql                = $alert_columns_conn->fetch();
-
+            //preg
             preg_match_all('/^\s+[`]([^`]*)`.*?$/m', $sql['Create Table'], $key_value);
             $alert_columns[$row['Name']] = array_combine($key_value[1], array_map(function ($item) {
                 return trim(rtrim($item, ','));
             }, $key_value[0]));
-            //获取主键索引
+            //get primary key
             preg_match_all($pattern, $sql['Create Table'], $matches);
-            $consrt                    = array_map(function ($item) {
+            $str                    = array_map(function ($item) {
                 return trim(rtrim($item, ','));
             }, $matches[0]);
-            $constraints[$row['Name']] = $consrt;
-            $show_create[$row['Name']] = $this->removeAutoIncrement ? preg_replace('/AUTO_INCREMENT=[^\s]*/', '',
+            $constraints[$row['Name']] = $str;
+            $show_create[$row['Name']] = $this->removeAutoIncrement ?
+                preg_replace('/AUTO_INCREMENT=[^\s]*/', '',
                 $sql['Create Table']) : $sql['Create Table'];
 
             $tables[] = $row['Name'];
@@ -176,7 +196,7 @@ class Mysql
                 $db  = $key.'Db';
                 $sql = str_replace('#', $this->connector->$db['dbname'], $list_sql[0]);
                 /**
-                 * @var $connect \PDOStatement
+                 * @var $connect PDOStatement
                  */
                 $connect = $this->connector->{$con}()->query($sql);
                 $result  = $connect->fetchAll();
@@ -233,6 +253,12 @@ class Mysql
         }
     }
 
+    /**
+     * getExecuteSqlPipeline
+     *
+     * @param $type
+     * @return \Closure|null
+     */
     public function getExecuteSqlPipeline($type)
     {
         $pipe = [
