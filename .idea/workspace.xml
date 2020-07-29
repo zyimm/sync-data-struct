@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7fe5a4a6-9a38-4345-a1a1-a099647cc77f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="fa23c6a2-a8f6-43e9-ba25-12e99cfe868c" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="www/sync-data-struct" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1fIPASqSwoiC3OQHjqADeiMJPra" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="localhost" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="localhost" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fe5a4a6-9a38-4345-a1a1-a099647cc77f" name="Default Changelist" comment="" />
+      <created>1595902489447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595902489447</updated>
+      <workItem from="1595902490629" duration="24034000" />
+      <workItem from="1595988861889" duration="5935000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="166" y="259" key="#SQL_Dialects" timestamp="1595929134287">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="166" y="259" key="#SQL_Dialects/0.0.1536.834@0.0.1536.834" timestamp="1595929134287" />
+    <state x="348" y="72" key="#Servers" timestamp="1595936625799">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="348" y="72" key="#Servers/0.0.1536.834@0.0.1536.834" timestamp="1595936625799" />
+    <state x="223" y="72" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595936635605">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="72" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1595936635605" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596010078030">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1596010078030" />
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595929372277">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1595929372277" />
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1595989137751">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595989137751" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1595989137751">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595989137751" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1595989137751">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595989137751" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1595989137751">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595989137751" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.2.bottom" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.2.center" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.2.left" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state width="1493" height="265" key="GridCell.Tab.2.right" timestamp="1595989137752">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1595989137752" />
+    <state x="549" y="204" key="NewPhpClassDialog" timestamp="1595929537593">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="204" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1595929537593" />
+    <state x="599" y="340" key="NewPhpFileDialog" timestamp="1595933453668">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="599" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1595933453668" />
+    <state x="270" y="62" key="SettingsEditor" timestamp="1595927920565">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1595927920565" />
+    <state x="468" y="149" width="600" height="536" key="find.popup" timestamp="1595936954097">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="468" y="149" width="600" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1595936954097" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>211</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>213</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>158</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>151</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>159</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>218</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>219</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>225</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>226</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>254</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/builder/Mysql.php</url>
+          <line>242</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

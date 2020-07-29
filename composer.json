@@ -1,0 +1,20 @@
+{
+  "name": "zyimm/sync-data-struct",
+  "description": "比较两个数据库之间的数据结构差异,并生成更新DDL|Compare the data structure differences between the two databases and generate update DDL",
+  "authors": [
+    {
+      "name": "zyimm",
+      "email": "zyimm@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.2",
+    "ext-mysqli": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zyimm\\dbStructSync\\": "src/"
+    }
+  }
+}
