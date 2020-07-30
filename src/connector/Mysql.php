@@ -42,7 +42,6 @@ class Mysql
     /**
      * Mysql constructor.
      *
-     *
      * @param  array  $config
      * @throws Exception
      */
