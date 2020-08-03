@@ -87,7 +87,7 @@ class Sync
     {
         $tpl  = dirname(__FILE__).'/template/html.tpl';
         $diff = array_filter($this->handle->getDiffSql());
-        $html =  include $tpl;
+        $html = include $tpl;
         var_export($html);
     }
 

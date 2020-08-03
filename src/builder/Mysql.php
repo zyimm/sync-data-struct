@@ -12,6 +12,7 @@ use Zyimm\dbStructSync\constants\Advance;
 class Mysql
 {
     use BuildTrait;
+
     /**
      * @var Connector
      */
@@ -112,13 +113,13 @@ class Mysql
             }, $key_value[0]));
             //get primary key
             preg_match_all($pattern, $sql['Create Table'], $matches);
-            $str                    = array_map(function ($item) {
+            $str                       = array_map(function ($item) {
                 return trim(rtrim($item, ','));
             }, $matches[0]);
             $constraints[$row['Name']] = $str;
             $show_create[$row['Name']] = $this->removeAutoIncrement ?
                 preg_replace('/AUTO_INCREMENT=[^\s]*/', '',
-                $sql['Create Table']) : $sql['Create Table'];
+                    $sql['Create Table']) : $sql['Create Table'];
 
             $tables[] = $row['Name'];
 
