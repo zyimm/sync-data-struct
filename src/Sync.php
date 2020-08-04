@@ -101,13 +101,13 @@ class Sync
     {
         $this->localConnector->query('SET FOREIGN_KEY_CHECKS=0');
         foreach ($add_table_sql_collect as $key => $sql) {
-            if ($this->localConnector->query($sql)) {
+            if ($this->localConnector->exec($sql)) {
                 $this->statistics['success']['ADD_TABLE'][] = $sql;
                 unset($add_table_sql_collect[$key]);
             } else {
                 $this->statistics['error']['ADD_TABLE'][] = $sql;
             }
         }
-        $this->localConnector->query('SET FOREIGN_KEY_CHECKS=1');
+        $this->localConnector->exec('SET FOREIGN_KEY_CHECKS=1');
     }
 }
