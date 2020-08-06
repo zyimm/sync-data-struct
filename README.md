@@ -10,7 +10,7 @@ composer  require zyimm/sync-data-struct
 ```
 ## example
 ```
-//error
+//set error
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 include '../vendor/autoload.php';
