@@ -20,7 +20,7 @@ $config = [
         'host'     => 'mysql',
         'username' => 'root',
         'passwd'   => '123456',
-        'dbname'   => 'lcoal'
+        'dbname'   => 'local'
     ],
     'dev'   => [
         'host'     => 'mysql',
