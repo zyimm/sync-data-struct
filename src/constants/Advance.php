@@ -2,6 +2,11 @@
 
 namespace Zyimm\dbStructSync\constants;
 
+/**
+ * Class Advance
+ *
+ * @package Zyimm\dbStructSync\constants
+ */
 class Advance
 {
     const VIEW = "SELECT TABLE_NAME as Name FROM information_schema.VIEWS WHERE TABLE_SCHEMA='#'";
