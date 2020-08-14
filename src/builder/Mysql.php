@@ -113,9 +113,11 @@ class Mysql
             }, $key_value[0]));
             //get primary key
             preg_match_all($pattern, $sql['Create Table'], $matches);
-            $str                       = array_map(function ($item) {
+            //$str
+            $str = array_map(function ($item) {
                 return trim(rtrim($item, ','));
             }, $matches[0]);
+            //$row['Name']
             $constraints[$row['Name']] = $str;
             $show_create[$row['Name']] = $this->removeAutoIncrement ?
                 preg_replace('/AUTO_INCREMENT=[^\s]*/', '',
@@ -146,7 +148,7 @@ class Mysql
     {
         $this->localStruct = $this->getStructure($this->connector->getLocalConnection());
         $this->devStruct   = $this->getStructure($this->connector->getDevConnection());
-
+        //$result
         $result               = [];
         $result['ADD_TABLE']  = array_diff($this->devStruct['tables'], $this->localStruct['tables']);
         $result['DROP_TABLE'] = array_diff($this->localStruct['tables'], $this->devStruct['tables']);
@@ -249,7 +251,7 @@ class Mysql
                         $key, $val, $key
                     );
                 }
-                $this->diffSql[$type][] = rtrim($sql, ',');
+                $this->diffSql[$type][] = trim($sql, ',');
             }
         }
     }

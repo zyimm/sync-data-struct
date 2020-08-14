@@ -61,7 +61,7 @@ class Sync
     {
         $this->statistics = [];
         $diff_sql_collect = array_filter($this->handle->getDiffSql());
-        if ($diff_sql_collect && $this->fetch) {
+        if ($diff_sql_collect && !$this->fetch) {
             $add_tables = isset($diff_sql_collect['ADD_TABLE']) ? $diff_sql_collect['ADD_TABLE'] : null;
             if ($add_tables) {
                 unset($diff_sql_collect['ADD_TABLE']);
@@ -69,7 +69,7 @@ class Sync
             }
             foreach ($diff_sql_collect as $type => $sql_list) {
                 foreach ($sql_list as $sql) {
-                    if ($this->localConnector->query($sql)) {
+                    if ($this->localConnector->exec($sql)) {
                         $this->statistics['success'][$type][] = $sql;
                     } else {
                         $this->statistics['error'][$type][] = $sql;

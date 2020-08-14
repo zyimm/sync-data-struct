@@ -10,13 +10,13 @@ $config = [
         'host'     => 'mysql',
         'username' => 'root',
         'passwd'   => '123456',
-        'dbname'   => 'crmeb_supplier_o'
+        'dbname'   => 'crmeb_supplier'
     ],
     'dev'   => [
-        'host'     => 'mysql',
+        'host'     => '10.0.1.192:33060',
         'username' => 'root',
-        'passwd'   => '123456',
-        'dbname'   => 'crmeb_supplier'
+        'passwd'   => '83gNmYjEYtau@',
+        'dbname'   => 'shop'
     ]
 ];
 $handle = new \Zyimm\dbStructSync\Sync($config);
