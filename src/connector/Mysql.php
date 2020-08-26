@@ -22,8 +22,10 @@ class Mysql
      */
     private $devConnection;
 
+    //localDb
     public $localDb = [];
 
+    //devDb
     public $devDb = [];
 
     /**

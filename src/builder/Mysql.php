@@ -18,8 +18,10 @@ class Mysql
      */
     private $connector;
 
+    //localStruct
     public $localStruct = [];
 
+    //devStruct
     public $devStruct = [];
 
     /**
