@@ -13,6 +13,7 @@ composer  require zyimm/sync-data-struct
 //set error
 error_reporting(E_ALL);
 ini_set('display_errors', true);
+//autoload
 include '../vendor/autoload.php';
 //db
 $config = [
