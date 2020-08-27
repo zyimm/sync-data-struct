@@ -19,6 +19,11 @@ class Advance
 
     const PROCEDURE = "show PROCEDURE STATUS WHERE Db='#'";
 
+    /**
+     * allow flag
+     *
+     * @var string[]
+     */
     public static $allow = [
         'ADD_VIEW', 'DROP_VIEW', 'ADD_TRIGGER', 'DROP_TRIGGER', 'ADD_EVENT', 'DROP_EVENT', 'ADD_FUNCTION',
         'DROP_FUNCTION', 'ADD_PROCEDURE', 'DROP_PROCEDURE'
