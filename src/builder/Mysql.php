@@ -250,7 +250,7 @@ class Mysql
             foreach ($rows as $key => $val) {
                 if ($this->getExecuteSqlPipeline($type)) {
                     $sql = call_user_func($this->getExecuteSqlPipeline($type),
-                        $key, $val, $key
+                        $table, $val, $key
                     );
                 }
                 $this->diffSql[$type][] = trim($sql, ',');

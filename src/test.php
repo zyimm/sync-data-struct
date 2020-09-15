@@ -13,9 +13,9 @@ $config = [
         'dbname'   => 'crmeb_supplier'
     ],
     'dev'   => [
-        'host'     => '10.0.1.192:33060',
+        'host'     => 'mysql',
         'username' => 'root',
-        'passwd'   => '83gNmYjEYtau@',
+        'passwd'   => '123456',
         'dbname'   => 'shop'
     ]
 ];
