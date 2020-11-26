@@ -61,7 +61,7 @@ class Sync
     {
         $this->statistics = [];
         $diff_sql_collect = array_filter($this->handle->getDiffSql());
-        if ($diff_sql_collect && !$this->fetch) {
+        if ($diff_sql_collect) {
             $add_tables = isset($diff_sql_collect['ADD_TABLE']) ? $diff_sql_collect['ADD_TABLE'] : null;
             if ($add_tables) {
                 unset($diff_sql_collect['ADD_TABLE']);
@@ -69,7 +69,7 @@ class Sync
             }
             foreach ($diff_sql_collect as $type => $sql_list) {
                 foreach ($sql_list as $sql) {
-                    if ($this->localConnector->exec($sql)) {
+                    if ($this->localConnector->query($sql)) {
                         $this->statistics['success'][$type][] = $sql;
                     } else {
                         $this->statistics['error'][$type][] = $sql;
@@ -85,10 +85,17 @@ class Sync
      */
     public function toHtml()
     {
+        header("Content-type:text/html;charset=utf-8");
         $tpl  = dirname(__FILE__).'/template/html.tpl';
         $diff = array_filter($this->handle->getDiffSql());
         $html = include $tpl;
         var_export($html);
+    }
+
+    public function toSqlFile()
+    {
+        header("Content-type:text/html;charset=utf-8");
+        //todo
     }
 
 
@@ -99,15 +106,17 @@ class Sync
      */
     private function executeAddTables($add_table_sql_collect)
     {
-        $this->localConnector->query('SET FOREIGN_KEY_CHECKS=0');
-        foreach ($add_table_sql_collect as $key => $sql) {
-            if ($this->localConnector->exec($sql)) {
-                $this->statistics['success']['ADD_TABLE'][] = $sql;
-                unset($add_table_sql_collect[$key]);
-            } else {
-                $this->statistics['error']['ADD_TABLE'][] = $sql;
+        if(!$this->fetch){
+            $this->localConnector->query('SET FOREIGN_KEY_CHECKS=0');
+            foreach ($add_table_sql_collect as $key => $sql) {
+                if ($this->localConnector->exec($sql)) {
+                    $this->statistics['success']['ADD_TABLE'][] = $sql;
+                    unset($add_table_sql_collect[$key]);
+                } else {
+                    $this->statistics['error']['ADD_TABLE'][] = $sql;
+                }
             }
+            $this->localConnector->exec('SET FOREIGN_KEY_CHECKS=1');
         }
-        $this->localConnector->exec('SET FOREIGN_KEY_CHECKS=1');
     }
 }

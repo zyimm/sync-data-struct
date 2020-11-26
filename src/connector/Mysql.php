@@ -22,10 +22,8 @@ class Mysql
      */
     private $devConnection;
 
-    //localDb
     public $localDb = [];
 
-    //devDb
     public $devDb = [];
 
     /**
@@ -55,7 +53,8 @@ class Mysql
             $dsn               = $this->getDsn($config[$key]['host'], $config[$key]['dbname']);
             $user              = $config[$key]['username'];
             $password          = $config[$key]['passwd'];
-            $this->{$connect}  = new PDO($dsn, $user, $password);
+            $this->{$connect}  = new PDO($dsn, $user, $password,
+                [PDO::MYSQL_ATTR_INIT_COMMAND => "set names utf8"]);
         }
     }
 

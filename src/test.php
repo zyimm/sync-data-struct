@@ -20,4 +20,4 @@ $config = [
     ]
 ];
 $handle = new \Zyimm\dbStructSync\Sync($config);
-echo $handle->executeSync()->toHtml();
+echo $handle->toHtml();

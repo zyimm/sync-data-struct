@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>code</title>
@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/prism/9000.0.1/themes/prism.min.css">
 </head>
 <body>
-    <?php foreach ($diff as $type => $sql_list): ?>
-        <h2><?php echo $type; ?></h2>
+<?php foreach ($diff as $type => $sql_list): ?>
+<h2><?php echo $type; ?></h2>
+<pre>
+    <code class='language-sql'>
         <?php foreach ($sql_list as $sql): ?>
-        <?php echo "<pre><code class='language-sql'>{$sql}</code></pre>"; ?>
+        <?php echo "{$sql};\r\n"; ?>
         <?php endforeach; ?>
-    <?php endforeach; ?>
+    </code>
+</pre>
+<?php endforeach; ?>
 <script src="https://cdn.staticfile.org/prism/9000.0.1/prism.min.js"></script>
 <script src="https://cdn.staticfile.org/prism/9000.0.1/components/prism-sql.min.js"></script>
 </body>
