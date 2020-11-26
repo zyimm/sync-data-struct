@@ -161,10 +161,10 @@ class Mysql
             foreach ($dev_columns as $table => $columns) {
                 foreach ($columns as $field => $sql) {
                     //add
-                    if (!isset($local_columns[$table][$field])) {
+                    if (!in_array($table, $result['ADD_TABLE']) && !isset($local_columns[$table][$field])) {
                         $result['ADD_FIELD'][$table][$field] = $sql;
                         //modify
-                    } elseif ($local_columns[$table][$field] !== $sql) {
+                    } elseif (isset($local_columns[$table][$field]) && $local_columns[$table][$field] !== $sql) {
                         $result['MODIFY_FIELD'][$table][$field] = $sql;
                         unset($local_columns[$table][$field]);
                     } else {
