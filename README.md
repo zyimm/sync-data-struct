@@ -1,5 +1,6 @@
 ## sync-data-struct
-sync-data-struct是一个用来比较两个数据库之间的数据结构差异,并生成更新DDL的工具包.方便对比出两个数据库之间差异来进行数据结构同步.
+sync-data-struct是一个用来比较两个数据库之间的数据结构差异,并生成更新DDL的工具包.方便对比出两个数据库之间差异来进行数据结构同步.|
+sync-data-struct is a toolkit for comparing data structure differences between two databases and generating updated DDL. Easy to compare the difference between the two databases for data structure synchronization
 
 ## support database
 - mysql
