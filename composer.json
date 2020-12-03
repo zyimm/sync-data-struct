@@ -1,6 +1,12 @@
 {
   "name": "zyimm/sync-data-struct",
   "description": "比较两个数据库之间的数据结构差异,并生成更新DDL|Compare the data structure differences between the two databases and generate update DDL",
+  "keywords": [
+    "mysql",
+    "sql structure",
+    "php"
+  ],
+  "license": "MIT",
   "authors": [
     {
       "name": "zyimm",
