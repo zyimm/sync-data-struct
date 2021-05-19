@@ -9,7 +9,7 @@ sync-data-struct is a toolkit for comparing data structure differences between t
 ```
 composer  require zyimm/sync-data-struct
 ```
-## example && 演示
+## example && 示例
 ```
 //set error
 error_reporting(E_ALL);
