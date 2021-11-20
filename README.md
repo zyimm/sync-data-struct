@@ -18,12 +18,14 @@ ini_set('display_errors', true);
 include '../vendor/autoload.php';
 //db
 $config = [
+    //本地数据库
     'local' => [
         'host'     => 'mysql',
         'username' => 'root',
         'passwd'   => '123456',
         'dbname'   => 'local'
     ],
+    //开发数据库或目标同步数据
     'dev'   => [
         'host'     => 'mysql',
         'username' => 'root',
