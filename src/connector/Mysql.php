@@ -61,7 +61,7 @@ class Mysql
     /**
      * getConfig
      *
-     * @return false|string
+     * @return string
      * @throws Exception
      */
     public function getConfig()
@@ -79,13 +79,14 @@ class Mysql
     /**
      * getDsn
      *
-     * @param  string  $host
-     * @param  string  $db_name
+     * @param string $host
+     * @param string $db_name
+     *
      * @return string
      */
     public function getDsn($host = '', $db_name = '')
     {
-        return "mysql:host={$host};dbname={$db_name}";
+        return "mysql:host=$host;dbname=$db_name";
     }
 
     /**

@@ -2,8 +2,10 @@
 
 namespace Zyimm\dbStructSync;
 
+use Exception;
+use PDO;
 use Zyimm\dbStructSync\builder\Mysql;
-use \Zyimm\dbStructSync\connector\Mysql as Connector;
+use Zyimm\dbStructSync\connector\Mysql as Connector;
 
 class Sync
 {
@@ -17,7 +19,7 @@ class Sync
     ];
 
     /**
-     * @var \PDO
+     * @var PDO
      */
     public $localConnector;
 
@@ -29,7 +31,7 @@ class Sync
     /**
      * Sync constructor.
      * @param  array  $config
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct(array $config)
     {
@@ -82,6 +84,8 @@ class Sync
 
     /**
      * toHtml
+     *
+     * @return mixed
      */
     public function toHtml()
     {
