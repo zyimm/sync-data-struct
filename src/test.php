@@ -1,6 +1,8 @@
 <?php
 
 //error
+use Zyimm\dbStructSync\Sync;
+
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 include '../vendor/autoload.php';
@@ -19,5 +21,5 @@ $config = [
         'dbname'   => 'shop'
     ]
 ];
-$handle = new \Zyimm\dbStructSync\Sync($config);
+$handle = new Sync($config);
 echo $handle->toHtml();
