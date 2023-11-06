@@ -10,7 +10,8 @@
   "authors": [
     {
       "name": "zyimm",
-      "email": "zyimm@qq.com"
+      "email": "zyimm@qq.com",
+      "homepage": "https://www.zyimm.com"
     }
   ],
   "minimum-stability": "dev",
